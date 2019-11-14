@@ -31,6 +31,8 @@
 </tbody>
 </table>
 
+This package provides an utility class for proper escaping a string such that in can included safely in CSS.
+
 #  License
 
 This project is licensed under the MIT license.

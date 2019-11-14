@@ -1,9 +1,10 @@
 <?php
+declare(strict_types=1);
 
-namespace SetBased\Abc\Helper\Test;
+namespace Plaisio\Helper\Test;
 
 use PHPUnit\Framework\TestCase;
-use SetBased\Abc\Helper\Css;
+use Plaisio\Helper\Css;
 use SetBased\Exception\FallenException;
 
 /**

@@ -1,8 +1,8 @@
 {
-  "name": "setbased/abc-helper-css",
-  "description": "ABC-Framework: CSS Helper",
+  "name": "plaisio/helper-css",
+  "description": "PhpPlaisio: CSS Helper",
   "keywords": [
-    "ABC-Framework",
+    "PhpPlaisio",
     "CSS"
   ],
   "license": "MIT",
@@ -17,12 +17,12 @@
   },
   "autoload": {
     "psr-4": {
-      "SetBased\\Abc\\Helper\\": "src/"
+      "Plaisio\\Helper\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "SetBased\\Abc\\Helper\\Test\\": "test/"
+      "Plaisio\\Helper\\Test\\": "test/"
     }
   },
   "config": {

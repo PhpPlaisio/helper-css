@@ -21,8 +21,9 @@
 <td>
 <a href="https://packagist.org/packages/plaisio/helper-css"><img src="https://poser.pugx.org/plaisio/helper-css/v/stable" alt="Latest Stable Version"/></a>
 </td>
-<td><a href="https://travis-ci.org/PhpPlaisio/helper-css"><img src="https://travis-ci.org/PhpPlaisio/helper-css.svg?branch=master" alt="Build Status"/></a><br/>
-<a href="https://scrutinizer-ci.com/g/PhpPlaisio/helper-css/?branch=master"><img src="https://scrutinizer-ci.com/g/PhpPlaisio/helper-css/badges/coverage.png?b=master" alt="Code Coverage"/></a><br/>
+<td><
+<a href="https://github.com/PhpPlaisio/helper-css/actions/workflows/unit.yml"><img src="https://github.com/PhpPlaisio/helper-css/actions/workflows/unit.yml/badge.svg" alt="Build Status"/></a><br/>
+<a href="https://codecov.io/gh/PhpPlaisio/helper-css"><img src="https://codecov.io/gh/PhpPlaisio/helper-css/branch/master/graph/badge.svg" alt="Code Coverage"/></a>
 </td>
 <td>
 <a href="https://scrutinizer-ci.com/g/PhpPlaisio/helper-css/?branch=master"><img src="https://scrutinizer-ci.com/g/PhpPlaisio/helper-css/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"/></a>

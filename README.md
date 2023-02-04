@@ -32,7 +32,7 @@
 </tbody>
 </table>
 
-This package provides an utility class for proper escaping a string such that in can included safely in CSS.
+This package provides a utility class for proper escaping a string such that in can include safely in CSS.
 
 #  License
 

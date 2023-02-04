@@ -21,7 +21,7 @@
 <td>
 <a href="https://packagist.org/packages/plaisio/helper-css"><img src="https://poser.pugx.org/plaisio/helper-css/v/stable" alt="Latest Stable Version"/></a>
 </td>
-<td><
+<td>
 <a href="https://github.com/PhpPlaisio/helper-css/actions/workflows/unit.yml"><img src="https://github.com/PhpPlaisio/helper-css/actions/workflows/unit.yml/badge.svg" alt="Build Status"/></a><br/>
 <a href="https://codecov.io/gh/PhpPlaisio/helper-css"><img src="https://codecov.io/gh/PhpPlaisio/helper-css/branch/master/graph/badge.svg" alt="Code Coverage"/></a>
 </td>

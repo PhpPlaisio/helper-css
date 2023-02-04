@@ -27,7 +27,7 @@ class Css
    *
    * @var int
    */
-  public static $quote = self::SINGLE_QUOTE;
+  public static int $quote = self::SINGLE_QUOTE;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**

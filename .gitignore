@@ -3,6 +3,8 @@
 /bin/phing
 /bin/phpunit
 /composer.lock
+/custom.task.properties
+/custom.type.properties
 /doc/
 /test/coverage.xml
 /test/report/

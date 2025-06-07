@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Plaisio\Helper\Test;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Plaisio\Helper\Css;
 use SetBased\Exception\FallenException;
@@ -18,28 +19,28 @@ class CssTest extends TestCase
    *
    * @return array
    */
-  public function cases1(): array
+  public static function cases1(): array
   {
     $cases = [];
 
     // Test for white space.
-    $cases[] = ['string'   => "\n\r\f\t\0",
+    $cases[] = ['text'     => "\n\r\f\t\0",
                 'expected' => "'\A \D \C \9 \\0 '"];
 
     // Test for white space.
-    $cases[] = ['string'   => "The backslash (\) is a typographical mark used mainly in computing and is the mirror image of the common slash (/)",
+    $cases[] = ['text'     => "The backslash (\) is a typographical mark used mainly in computing and is the mirror image of the common slash (/)",
                 'expected' => "'The backslash (\\\\) is a typographical mark used mainly in computing and is the mirror image of the common slash (/)'"];
 
     // Test with single quotes.
-    $cases[] = ['string'   => "Didn't she say 'I like red best' when I asked her wine preferences?",
+    $cases[] = ['text'     => "Didn't she say 'I like red best' when I asked her wine preferences?",
                 'expected' => "'Didn\'t she say \'I like red best\' when I asked her wine preferences?'"];
 
     // Test with double quotes.
-    $cases[] = ['string'   => 'The "fresh" apples were full of worms.',
+    $cases[] = ['text'     => 'The "fresh" apples were full of worms.',
                 'expected' => "'The \"fresh\" apples were full of worms.'"];
 
-    // Don't changes other non ASCII characters,
-    $cases[] = ['string'   => 'Апостроф',
+    // Don't change other non ASCII characters,
+    $cases[] = ['text'     => 'Апостроф',
                 'expected' => "'Апостроф'"];
 
     return $cases;
@@ -51,28 +52,28 @@ class CssTest extends TestCase
    *
    * @return array
    */
-  public function cases2(): array
+  public static function cases2(): array
   {
     $cases = [];
 
     // Test for white space.
-    $cases[] = ['string'   => "\n\r\f\t\0",
+    $cases[] = ['text'     => "\n\r\f\t\0",
                 'expected' => "\"\A \D \C \9 \\0 \""];
 
     // Test for white space.
-    $cases[] = ['string'   => "The backslash (\) is a typographical mark used mainly in computing and is the mirror image of the common slash (/)",
+    $cases[] = ['text'     => "The backslash (\) is a typographical mark used mainly in computing and is the mirror image of the common slash (/)",
                 'expected' => "\"The backslash (\\\\) is a typographical mark used mainly in computing and is the mirror image of the common slash (/)\""];
 
     // Test with single quotes.
-    $cases[] = ['string'   => "Didn't she say 'I like red best' when I asked her wine preferences?",
+    $cases[] = ['text'     => "Didn't she say 'I like red best' when I asked her wine preferences?",
                 'expected' => "\"Didn't she say 'I like red best' when I asked her wine preferences?\""];
 
     // Test with double quotes.
-    $cases[] = ['string'   => 'The "fresh" apples were full of worms.',
+    $cases[] = ['text'     => 'The "fresh" apples were full of worms.',
                 'expected' => "\"The \\\"fresh\\\" apples were full of worms.\""];
 
-    // Don't changes other non ASCII characters,
-    $cases[] = ['string'   => 'Апостроф',
+    // Don't change other non ASCII characters,
+    $cases[] = ['text'     => 'Апостроф',
                 'expected' => "\"Апостроф\""];
 
     return $cases;
@@ -96,9 +97,8 @@ class CssTest extends TestCase
    *
    * @param string|null $text     The text to be escaped.
    * @param string      $expected The expected value.
-   *
-   * @dataProvider cases1
    */
+  #[DataProvider('cases1')]
   public function testTxt2CssString1(?string $text, string $expected): void
   {
     Css::$quote = Css::SINGLE_QUOTE;
@@ -113,9 +113,8 @@ class CssTest extends TestCase
    *
    * @param string|null $text     The text to be escaped.
    * @param string      $expected The expected value.
-   *
-   * @dataProvider cases2
    */
+  #[DataProvider('cases2')]
   public function testTxt2CssString2(?string $text, string $expected): void
   {
     Css::$quote = Css::DOUBLE_QUOTE;

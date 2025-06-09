@@ -9,7 +9,7 @@
   "require": {
     "php": ">=8.3",
     "ext-mbstring": "*",
-    "setbased/exception": "^2.3.0"
+    "setbased/exception": "^2.6.0"
   },
   "require-dev": {
     "phing/phing": "^3.0.1",
